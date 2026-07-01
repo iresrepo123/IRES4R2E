@@ -1,0 +1,14 @@
+bert-score
+matplotlib
+nltk
+numpy
+rank-bm25
+requests
+rouge-score
+scipy
+sentence-transformers
+tensorflow
+tensorflow-hub
+torch
+tqdm
+transformers

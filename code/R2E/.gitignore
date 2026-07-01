@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+.DS_Store
+
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.gguf
