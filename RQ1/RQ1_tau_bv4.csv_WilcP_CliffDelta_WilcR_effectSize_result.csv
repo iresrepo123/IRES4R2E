@@ -1,0 +1,11 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+IRES_kendall vs BLEU_4_kendall,0.0,0.0,0.4786150712830957,large,-0.5492652529353282,large
+IRES_kendall vs ROUGE_L_kendall,0.0,0.0,0.4879032258064516,large,-0.5396473413167503,large
+IRES_kendall vs METEOR_kendall,0.0,0.0,0.38085539714867617,medium,-0.42148977642707325,medium
+IRES_kendall vs BERTScore_kendall,0.0,0.0,0.4669421487603306,medium,-0.523633551072558,large
+IRES_kendall vs SentenceBERT_kendall,3.2529534621517087E-11,3.2529534621517087E-11,0.23430962343096234,small,-0.2973230984214909,small
+IRES_kendall vs USE_kendall,0.0,0.0,0.4090909090909091,medium,-0.44794919796955707,medium
+IRES_kendall vs InferSent_kendall,0.0,0.0,0.6231884057971014,large,-0.6139129956919241,large
+IRES_kendall vs BLEURT_kendall,0.0,0.0,0.3903966597077244,medium,-0.4274649084927341,medium
+IRES_kendall vs SIDE_kendall,0.0,0.0,0.49586776859504134,large,-0.5433002616330727,large
+IRES_kendall vs SimLLM_kendall,0.0,0.0,0.4166666666666667,medium,-0.4758411676351007,medium
