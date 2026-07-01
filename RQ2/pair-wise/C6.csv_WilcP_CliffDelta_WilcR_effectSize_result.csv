@@ -1,0 +1,9 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C1}}$,0.0,0.0,0.5601443464314354,large,-0.6563167876346098,large
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C2}}$,0.0,0.0,0.12909054406745635,negligible,-0.14606386021730317,small
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C3}}$,4.285741655341013E-6,1.285722496602304E-5,0.05176565008025682,negligible,-0.065115895632784,negligible
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C4}}$,0.01672945177451668,0.01672945177451668,0.0335408716609761,negligible,-0.03390769024842166,negligible
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C5}}$,0.0,0.0,0.2541624874623872,small,-0.32412499325346966,medium
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C7}}$,0.0,0.0,0.16987951807228915,small,-0.21264138822929907,small
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C8}}$,3.376449031478046E-8,1.3505796125912184E-7,0.06474243335337743,negligible,-0.07816028476658542,negligible
+\texttt{R2E}$_{\text{C6}}$ vs \texttt{R2E}$_{\text{C9}}$,0.005153597150210132,0.010307194300420264,0.029281989570798236,negligible,-0.03961484385427397,negligible
