@@ -7,11 +7,11 @@ This directory contains the core pipeline for R2E framework.
 - `query_context2.sc`: Joern query used to extract project context.
 - `projects_json_context/`: extracted method and project-context records.
 - `sample_dataset.py`: reproducible balanced sampling with seed 42.
-- `prompt.md` and `prompt_generator.py`: L1-L9 prompt specification and generation.
+- `prompt.md` and `prompt_generator.py`: C1-C9 prompt specification and generation.
 - `summary_generator.py`: summary generation through an OpenAI-compatible API.
 - `bm25.py`: project-local retrieval of three reconstruction examples.
 - `code_generator.py`: summary-to-code reconstruction.
-- `cal_distance/cal_distance_IRES.py`: IRS calculation with code embeddings.
+- `cal_distance/cal_distance_IRES.py`: *IRES* calculation with code embeddings.
 - `cal_distance/calculate_*.py`: reference-based baseline metrics.
 - `annotation_app/`: browser-based human annotation interface.
 
@@ -29,8 +29,7 @@ Never store an API key in source files or commit a local `.env` file.
 
 ## Core pipeline
 
-Run the following commands from the repository root. Script defaults resolve
-relative to `code1`; explicit paths below make every pipeline connection clear.
+Run the following commands from the repository root. Script defaults resolve relative to `code1`; explicit paths below make every pipeline connection clear.
 
 ```bash
 python code1/sample_dataset.py
@@ -61,12 +60,8 @@ python code1/cal_distance/cal_distance_IRES.py \
   --model Qwen/Qwen3-Embedding-8B
 ```
 
-Repeat summary generation, reconstruction, and IRS calculation for each desired
-context level and model, changing the explicit input and output paths.
+Repeat summary generation, reconstruction, and *IRES* calculation for each desired context configuration  and model setting, changing the explicit input and output paths.
 
 ## Optional baselines
 
-The baseline scripts under `cal_distance/` cover BLEU-4, ROUGE-L, METEOR,
-BERTScore, Sentence-BERT, USE, BLEURT, InferSent, SIDE, and SimLLM. BLEURT,
-InferSent, SIDE, and SimLLM require their respective external repositories or
-model checkpoints; model weights are not included.
+The baseline scripts under `cal_distance/` cover BLEU-4, ROUGE-L, METEOR, BERTScore, Sentence-BERT, USE, BLEURT, InferSent, SIDE, and SimLLM. BLEURT, InferSent, SIDE, and SimLLM require their respective external repositories or model checkpoints; model weights are not included.
