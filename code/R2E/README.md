@@ -1,7 +1,6 @@
-# IRS core replication package
+# R2E
 
-This directory contains the core pipeline for the IRS paper. The RQ1-RQ3
-statistical-analysis scripts are intentionally excluded.
+This directory contains the core pipeline for R2E framework.
 
 ## Contents
 
