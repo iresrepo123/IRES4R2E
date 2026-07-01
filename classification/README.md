@@ -37,4 +37,4 @@ For any two distinct observations $(X_i, Y_i)$ and $(X_j, Y_j)$ where $i < j$:
 
 ------
 
-*Note: When citing this in your paper, you may also want to include the original reference: Kendall, M. G. (1938). A new measure of rank correlation. Biometrika, 30(1/2), 81-93.*
+*Kendall, M. G. (1938). A new measure of rank correlation. Biometrika, 30(1/2), 81-93.*
