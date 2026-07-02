@@ -9,3 +9,5 @@ While CodeSearchNet provides the necessary method-level metadata, it lacks the c
 7. We randomly sampled a balanced number of methods from each project (i.e., opencms-core and thredds contributed 358 methods each, while the remaining 12 projects contributed 357 methods each), yielding a final dataset of 5,000 methods (cf. Table~\ref{tab:dataset}).
 
 Unless otherwise specified, all empirical evaluations in this study are conducted on this final dataset.
+
+**Our dataset is available at code\R2E\dataset**.
