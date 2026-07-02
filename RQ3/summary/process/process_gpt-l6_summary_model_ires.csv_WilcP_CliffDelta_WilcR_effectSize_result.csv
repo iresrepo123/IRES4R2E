@@ -1,0 +1,6 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+GPT-5.4-mini vs Deepseek-V3.2,0.0,0.0,0.1527331189710611,small,-0.17837677321232243,small
+GPT-5.4-mini vs Deepseek-V4-Flash,1.3400899501192498E-8,1.3400899501192498E-8,0.07698476343223737,negligible,-0.08043604846435587,negligible
+GPT-5.4-mini vs Gemini-3.1-Flash-Lite-Preview,0.0,0.0,0.14865407794294896,small,-0.16937909160645473,small
+GPT-5.4-mini vs Qwen3-32B,0.0,0.0,0.15316760224538895,small,-0.2050348635329351,small
+GPT-5.4-mini vs Qwen3-Coder-30B-A3B-Instruct,0.0,0.0,0.28098011648925486,small,-0.34174055621376864,medium

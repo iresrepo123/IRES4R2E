@@ -1,0 +1,6 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+Deepseek-V3.2 vs Gemini-3.1-Flash-Lite-Preview,0.5515330900452109,0.5515330900452109,0.007639726578206675,negligible,-0.008442909007348242,negligible
+Deepseek-V3.2 vs Qwen3-32B,0.03652665310413217,0.07305330620826433,0.02385247544598116,negligible,-0.029603871363040896,negligible
+Deepseek-V3.2 vs Qwen3-Coder-30B-A3B-Instruct,0.0,0.0,0.13552526062550121,negligible,-0.19042025185887257,small
+Deepseek-V3.2 vs GPT-5.4-mini,0.0,0.0,-0.1527331189710611,small,-0.17837677321232243,small
+Deepseek-V3.2 vs Deepseek-V4-Flash,1.3322676295501878E-15,3.9968028886505635E-15,-0.0897049969897652,negligible,-0.1131714135211107,small

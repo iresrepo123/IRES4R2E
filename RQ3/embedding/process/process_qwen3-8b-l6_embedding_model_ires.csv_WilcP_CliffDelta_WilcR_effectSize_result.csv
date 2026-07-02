@@ -1,0 +1,3 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+qwen3-8B_ires vs qwen3-4B_ires,0.0,0.0,0.12747648589153493,negligible,-0.15801507663509354,small
+qwen3-8B_ires vs doubao-embedding-vision-251215_ires,0.0,0.0,0.8937023666265543,large,-0.8369395854644255,large

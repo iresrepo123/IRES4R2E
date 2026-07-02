@@ -1,0 +1,7 @@
+GPT-5.4-mini_ires&2.6717\\
+Deepseek-V4-Flash_ires&2.8539\\
+Deepseek-V3.2_ires&3.0493\\
+Gemini-3.1-Flash-Lite-Preview_ires&3.0411\\
+Qwen3-Coder-30B-A3B-Instruct_ires&3.3840\\
+
+4+3+2+1=10 comparisons

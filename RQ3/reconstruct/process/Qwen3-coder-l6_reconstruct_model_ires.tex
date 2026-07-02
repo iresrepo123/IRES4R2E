@@ -1,0 +1,179 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{lscape}
+\title{Results}
+\date{\today}
+\begin{document}
+\begin{landscape}
+\oddsidemargin 0in \topmargin 0in\maketitle
+\section{Tables of Friedman, Bonferroni-Dunn, Holm, Hochberg and Hommel Tests}
+\begin{table}[!htp]
+\centering
+\caption{Average Rankings of the algorithms
+}\begin{tabular}{c|c}
+Algorithm&Ranking\\
+\hline
+deepseekv3.2_ires&3.6717\\
+deepseekv4-flash_ires&3.2879\\
+gpt-5.4-mini_ires&3.3149\\
+gemini-3.1-flash-lite-preview_ires&3.4852\\
+Qwen3-32B_ires&3.6546\\
+Qwen3-Coder-30B-A3B-Instruct_ires&3.5857\\
+\end{tabular}
+\end{table}
+
+
+Friedman statistic considering reduction performance (distributed according to chi-square with 5 degrees of freedom: 200.2771428439384.
+
+
+P-value computed by Friedman Test: 1.0281675510981358E-10.\newline
+
+Iman and Davenport statistic considering reduction performance (distributed according to F-distribution with 5 and 24995 degrees of freedom: 40.37083167596576.
+
+
+P-value computed by Iman and Daveport Test: 1.6653345369377348E-15.\newline
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Hochberg Table for $\alpha=0.05$}
+\begin{tabular}{ccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel\\
+\hline
+5&deepseekv3.2_ires&10.257486464597813&1.095203741425631E-24&0.01\\
+4&Qwen3-32B_ires&9.800469740927493&1.1206327588238902E-22&0.0125\\
+3&Qwen3-Coder-30B-A3B-Instruct_ires&7.959039784151596&1.733794887201547E-15&0.016666666666666666\\
+2&gemini-3.1-flash-lite-preview_ires&5.273064302931712&1.3416452851608428E-7&0.025\\
+1&gpt-5.4-mini_ires&0.7216053531641072&0.4705371470072602&0.05\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.01$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+Hochberg's procedure rejects those hypotheses that have a p-value $\le0.025$.
+
+
+Hommel's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Hochberg Table for $\alpha=0.10$}
+\begin{tabular}{ccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel\\
+\hline
+5&deepseekv3.2_ires&10.257486464597813&1.095203741425631E-24&0.02\\
+4&Qwen3-32B_ires&9.800469740927493&1.1206327588238902E-22&0.025\\
+3&Qwen3-Coder-30B-A3B-Instruct_ires&7.959039784151596&1.733794887201547E-15&0.03333333333333333\\
+2&gemini-3.1-flash-lite-preview_ires&5.273064302931712&1.3416452851608428E-7&0.05\\
+1&gpt-5.4-mini_ires&0.7216053531641072&0.4705371470072602&0.1\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.02$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.1$.
+
+
+Hochberg's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+Hommel's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Adjusted $p$-values}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Bonf}$&$p_{Holm}$&$p_{Hoch}$&$p_{Homm}$\\
+\hline
+1&deepseekv3.2_ires&1.095203741425631E-24&5.476018707128155E-24&5.476018707128155E-24&5.476018707128155E-24&5.476018707128155E-24\\
+2&Qwen3-32B_ires&1.1206327588238902E-22&5.603163794119451E-22&4.482531035295561E-22&4.482531035295561E-22&4.482531035295561E-22\\
+3&Qwen3-Coder-30B-A3B-Instruct_ires&1.733794887201547E-15&8.668974436007735E-15&5.201384661604641E-15&5.201384661604641E-15&5.201384661604641E-15\\
+4&gemini-3.1-flash-lite-preview_ires&1.3416452851608428E-7&6.708226425804214E-7&2.6832905703216855E-7&2.6832905703216855E-7&2.6832905703216855E-7\\
+5&gpt-5.4-mini_ires&0.4705371470072602&2.352685735036301&0.4705371470072602&0.4705371470072602&0.4705371470072602\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Shaffer Table for $\alpha=0.05$}
+\begin{tabular}{cccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm&Shaffer\\
+\hline
+15&deepseekv3.2_ires vs. deepseekv4-flash_ires&10.257486464597813&1.095203741425631E-24&0.0033333333333333335&0.0033333333333333335\\14&deepseekv4-flash_ires vs. Qwen3-32B_ires&9.800469740927493&1.1206327588238902E-22&0.0035714285714285718&0.005\\13&deepseekv3.2_ires vs. gpt-5.4-mini_ires&9.535881111433705&1.4861808996264307E-21&0.0038461538461538464&0.005\\12&gpt-5.4-mini_ires vs. Qwen3-32B_ires&9.078864387763385&1.0971353428167907E-19&0.004166666666666667&0.005\\11&deepseekv4-flash_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&7.959039784151596&1.733794887201547E-15&0.004545454545454546&0.005\\10&gpt-5.4-mini_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&7.237434430987489&4.572516792512795E-13&0.005&0.005\\9&deepseekv4-flash_ires vs. gemini-3.1-flash-lite-preview_ires&5.273064302931712&1.3416452851608428E-7&0.005555555555555556&0.0071428571428571435\\8&deepseekv3.2_ires vs. gemini-3.1-flash-lite-preview_ires&4.9844221616661&6.214725753292981E-7&0.00625&0.0071428571428571435\\7&gpt-5.4-mini_ires vs. gemini-3.1-flash-lite-preview_ires&4.551458949767605&5.327519320263412E-6&0.0071428571428571435&0.0071428571428571435\\6&gemini-3.1-flash-lite-preview_ires vs. Qwen3-32B_ires&4.52740543799578&5.971230718371807E-6&0.008333333333333333&0.008333333333333333\\5&gemini-3.1-flash-lite-preview_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&2.6859754812198835&0.00723183955030375&0.01&0.0125\\4&deepseekv3.2_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&2.2984466804462165&0.021536379277793213&0.0125&0.0125\\3&Qwen3-32B_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&1.8414299567758967&0.06555857619452067&0.016666666666666666&0.016666666666666666\\2&deepseekv4-flash_ires vs. gpt-5.4-mini_ires&0.7216053531641072&0.4705371470072602&0.025&0.025\\1&deepseekv3.2_ires vs. Qwen3-32B_ires&0.45701672367032&0.6476590251004123&0.05&0.05\\\hline
+\end{tabular}
+\end{table}
+Nemenyi's procedure rejects those hypotheses that have a p-value $\le0.0033333333333333335$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.0125$.
+
+
+Shaffer's procedure rejects those hypotheses that have a p-value $\le0.0033333333333333335$.
+
+
+Bergmann's procedure rejects these hypotheses:
+
+
+\begin{itemize}
+
+
+\item deepseekv3.2_ires vs. deepseekv4-flash_ires\item deepseekv3.2_ires vs. gpt-5.4-mini_ires\item deepseekv3.2_ires vs. gemini-3.1-flash-lite-preview_ires\item deepseekv4-flash_ires vs. gemini-3.1-flash-lite-preview_ires\item deepseekv4-flash_ires vs. Qwen3-32B_ires\item deepseekv4-flash_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires\item gpt-5.4-mini_ires vs. gemini-3.1-flash-lite-preview_ires\item gpt-5.4-mini_ires vs. Qwen3-32B_ires\item gpt-5.4-mini_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires\item gemini-3.1-flash-lite-preview_ires vs. Qwen3-32B_ires\item gemini-3.1-flash-lite-preview_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires\end{itemize}
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Shaffer Table for $\alpha=0.10$}
+\begin{tabular}{cccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm&Shaffer\\
+\hline
+15&deepseekv3.2_ires vs. deepseekv4-flash_ires&10.257486464597813&1.095203741425631E-24&0.006666666666666667&0.006666666666666667\\14&deepseekv4-flash_ires vs. Qwen3-32B_ires&9.800469740927493&1.1206327588238902E-22&0.0071428571428571435&0.01\\13&deepseekv3.2_ires vs. gpt-5.4-mini_ires&9.535881111433705&1.4861808996264307E-21&0.007692307692307693&0.01\\12&gpt-5.4-mini_ires vs. Qwen3-32B_ires&9.078864387763385&1.0971353428167907E-19&0.008333333333333333&0.01\\11&deepseekv4-flash_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&7.959039784151596&1.733794887201547E-15&0.009090909090909092&0.01\\10&gpt-5.4-mini_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&7.237434430987489&4.572516792512795E-13&0.01&0.01\\9&deepseekv4-flash_ires vs. gemini-3.1-flash-lite-preview_ires&5.273064302931712&1.3416452851608428E-7&0.011111111111111112&0.014285714285714287\\8&deepseekv3.2_ires vs. gemini-3.1-flash-lite-preview_ires&4.9844221616661&6.214725753292981E-7&0.0125&0.014285714285714287\\7&gpt-5.4-mini_ires vs. gemini-3.1-flash-lite-preview_ires&4.551458949767605&5.327519320263412E-6&0.014285714285714287&0.014285714285714287\\6&gemini-3.1-flash-lite-preview_ires vs. Qwen3-32B_ires&4.52740543799578&5.971230718371807E-6&0.016666666666666666&0.016666666666666666\\5&gemini-3.1-flash-lite-preview_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&2.6859754812198835&0.00723183955030375&0.02&0.025\\4&deepseekv3.2_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&2.2984466804462165&0.021536379277793213&0.025&0.025\\3&Qwen3-32B_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires&1.8414299567758967&0.06555857619452067&0.03333333333333333&0.03333333333333333\\2&deepseekv4-flash_ires vs. gpt-5.4-mini_ires&0.7216053531641072&0.4705371470072602&0.05&0.05\\1&deepseekv3.2_ires vs. Qwen3-32B_ires&0.45701672367032&0.6476590251004123&0.1&0.1\\\hline
+\end{tabular}
+\end{table}
+Nemenyi's procedure rejects those hypotheses that have a p-value $\le0.006666666666666667$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.03333333333333333$.
+
+
+Shaffer's procedure rejects those hypotheses that have a p-value $\le0.006666666666666667$.
+
+
+Bergmann's procedure rejects these hypotheses:
+
+
+\begin{itemize}
+
+
+\item deepseekv3.2_ires vs. deepseekv4-flash_ires
+\item deepseekv3.2_ires vs. gpt-5.4-mini_ires
+\item deepseekv3.2_ires vs. gemini-3.1-flash-lite-preview_ires
+\item deepseekv3.2_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires
+\item deepseekv4-flash_ires vs. gemini-3.1-flash-lite-preview_ires
+\item deepseekv4-flash_ires vs. Qwen3-32B_ires
+\item deepseekv4-flash_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires
+\item gpt-5.4-mini_ires vs. gemini-3.1-flash-lite-preview_ires
+\item gpt-5.4-mini_ires vs. Qwen3-32B_ires
+\item gpt-5.4-mini_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires
+\item gemini-3.1-flash-lite-preview_ires vs. Qwen3-32B_ires
+\item gemini-3.1-flash-lite-preview_ires vs. Qwen3-Coder-30B-A3B-Instruct_ires
+\end{itemize}
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Adjusted $p$-values}
+\begin{tabular}{cccccccc}
+i&hypothesis&unadjusted $p$&$p_{Neme}$&$p_{Holm}$&$p_{Shaf}$&$p_{Berg}$\\
+\hline
+1&deepseekv3.2_ires vs .deepseekv4-flash_ires&.0000&.0000&.0000&.0000&.0000\\2&deepseekv4-flash_ires vs .Qwen3-32B_ires&.0000&.0000&.0000&.0000&.0000\\3&deepseekv3.2_ires vs .gpt-5.4-mini_ires&.0000&.0000&.0000&.0000&.0000\\4&gpt-5.4-mini_ires vs .Qwen3-32B_ires&.0000&.0000&.0000&.0000&.0000\\5&deepseekv4-flash_ires vs .Qwen3-Coder-30B-A3B-Instruct_ires&.0000&.0000&.0000&.0000&.0000\\6&gpt-5.4-mini_ires vs .Qwen3-Coder-30B-A3B-Instruct_ires&.0000&.0000&.0000&.0000&.0000\\7&deepseekv4-flash_ires vs .gemini-3.1-flash-lite-preview_ires&.0000&.0000&.0000&.0000&.0000\\8&deepseekv3.2_ires vs .gemini-3.1-flash-lite-preview_ires&.0000&.0000&.0000&.0000&.0000\\9&gpt-5.4-mini_ires vs .gemini-3.1-flash-lite-preview_ires&.0000&.0001&.0000&.0000&.0000\\10&gemini-3.1-flash-lite-preview_ires vs .Qwen3-32B_ires&.0000&.0001&.0000&.0000&.0000\\11&gemini-3.1-flash-lite-preview_ires vs .Qwen3-Coder-30B-A3B-Instruct_ires&.0072&.1085&.0362&.0289&.0217\\12&deepseekv3.2_ires vs .Qwen3-Coder-30B-A3B-Instruct_ires&.0215&.3230&.0861&.0861&.0861\\13&Qwen3-32B_ires vs .Qwen3-Coder-30B-A3B-Instruct_ires&.0656&.9834&.1967&.1967&.1311\\14&deepseekv4-flash_ires vs .gpt-5.4-mini_ires&.4705&7.0581&.9411&.9411&.9411\\15&deepseekv3.2_ires vs .Qwen3-32B_ires&.6477&9.7149&.9411&.9411&.9411\\\hline
+\end{tabular}
+\end{table}
+
+\end{landscape}\end{document}

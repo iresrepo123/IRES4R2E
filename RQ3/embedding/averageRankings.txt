@@ -1,0 +1,5 @@
+qwen3-8B_ires&1.4907\\
+qwen3-4B_ires&1.6378\\
+doubao-embedding-vision-251215_ires&2.8715\\
+
+2+1=3 个 对比结果

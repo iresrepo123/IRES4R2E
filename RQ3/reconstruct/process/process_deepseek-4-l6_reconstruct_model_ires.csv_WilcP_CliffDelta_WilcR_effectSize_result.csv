@@ -1,0 +1,6 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+deepseekv4-flash_ires vs deepseekv3.2_ires,0.0,0.0,0.12622917920931165,negligible,-0.15601469188864045,small
+deepseekv4-flash_ires vs Qwen3-Coder-30B-A3B-Instruct_ires,0.0,0.0,0.10258984139730978,negligible,-0.12824880918308768,small
+deepseekv4-flash_ires vs gpt-5.4-mini_ires,0.044490375366139645,0.044490375366139645,0.002004008016032064,negligible,-0.028435477704594758,negligible
+deepseekv4-flash_ires vs gemini-3.1-flash-lite-preview_ires,1.9928483523390383E-6,3.985696704678077E-6,0.06893787575150301,negligible,-0.06730107368426481,negligible
+deepseekv4-flash_ires vs Qwen3-32B_ires,0.0,0.0,0.1254509018036072,negligible,-0.16441699226141065,small

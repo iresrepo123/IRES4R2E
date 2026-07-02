@@ -1,0 +1,173 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{lscape}
+\title{Results}
+\date{\today}
+\begin{document}
+\begin{landscape}
+\oddsidemargin 0in \topmargin 0in\maketitle
+\section{Tables of Friedman, Bonferroni-Dunn, Holm, Hochberg and Hommel Tests}
+\begin{table}[!htp]
+\centering
+\caption{Average Rankings of the algorithms
+}\begin{tabular}{c|c}
+Algorithm&Ranking\\
+\hline
+Deepseek-V3.2&3.5374\\
+Gemini-3.1-Flash-Lite-Preview&3.5280\\
+Qwen3-32B&3.5885\\
+Qwen3-Coder-30B-A3B-Instruct&3.9424\\
+GPT-5.4-mini&3.0953\\
+Deepseek-V4-Flash&3.3084\\
+\end{tabular}
+\end{table}
+
+
+Friedman statistic considering reduction performance (distributed according to chi-square with 5 degrees of freedom: 580.322028558129.
+
+
+P-value computed by Friedman Test: 1.9037860177206767E-10.\newline
+
+Iman and Davenport statistic considering reduction performance (distributed according to F-distribution with 5 and 24995 degrees of freedom: 118.79885656783681.
+
+
+P-value computed by Iman and Daveport Test: 3.9968028886505635E-15.\newline
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Hochberg Table for $\alpha=0.05$}
+\begin{tabular}{ccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel\\
+\hline
+5&Qwen3-Coder-30B-A3B-Instruct&22.639699802399587&1.7623955826820415E-113&0.01\\
+4&Qwen3-32B&13.181324451119698&1.1240004898446347E-39&0.0125\\
+3&Deepseek-V3.2&11.815619504947401&3.241506592879603E-32&0.016666666666666666\\
+2&Gemini-3.1-Flash-Lite-Preview&11.564393937549442&6.243054017970726E-31&0.025\\
+1&Deepseek-V4-Flash&5.695337065153023&1.2312842324798461E-8&0.05\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.01$.
+
+
+Hochberg's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+Hommel's procedure rejects all hypotheses.
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Hochberg Table for $\alpha=0.10$}
+\begin{tabular}{ccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel\\
+\hline
+5&Qwen3-Coder-30B-A3B-Instruct&22.639699802399587&1.7623955826820415E-113&0.02\\
+4&Qwen3-32B&13.181324451119698&1.1240004898446347E-39&0.025\\
+3&Deepseek-V3.2&11.815619504947401&3.241506592879603E-32&0.03333333333333333\\
+2&Gemini-3.1-Flash-Lite-Preview&11.564393937549442&6.243054017970726E-31&0.05\\
+1&Deepseek-V4-Flash&5.695337065153023&1.2312842324798461E-8&0.1\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.02$.
+
+
+Hochberg's procedure rejects those hypotheses that have a p-value $\le0.1$.
+
+
+Hommel's procedure rejects all hypotheses.
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Adjusted $p$-values}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Bonf}$&$p_{Holm}$&$p_{Hoch}$&$p_{Homm}$\\
+\hline
+1&Qwen3-Coder-30B-A3B-Instruct&1.7623955826820415E-113&8.811977913410208E-113&8.811977913410208E-113&8.811977913410208E-113&8.811977913410208E-113\\
+2&Qwen3-32B&1.1240004898446347E-39&5.620002449223174E-39&4.496001959378539E-39&4.496001959378539E-39&4.496001959378539E-39\\
+3&Deepseek-V3.2&3.241506592879603E-32&1.6207532964398013E-31&9.724519778638808E-32&9.724519778638808E-32&9.724519778638808E-32\\
+4&Gemini-3.1-Flash-Lite-Preview&6.243054017970726E-31&3.121527008985363E-30&1.2486108035941453E-30&1.2486108035941453E-30&1.2486108035941453E-30\\
+5&Deepseek-V4-Flash&1.2312842324798461E-8&6.15642116239923E-8&1.2312842324798461E-8&1.2312842324798461E-8&1.2312842324798461E-8\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Shaffer Table for $\alpha=0.05$}
+\begin{tabular}{cccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm&Shaffer\\
+\hline
+15&Qwen3-Coder-30B-A3B-Instruct vs. GPT-5.4-mini&22.639699802399587&1.7623955826820415E-113&0.0033333333333333335&0.0033333333333333335\\14&Qwen3-Coder-30B-A3B-Instruct vs. Deepseek-V4-Flash&16.944362737246564&2.118168854236548E-64&0.0035714285714285718&0.005\\13&Qwen3-32B vs. GPT-5.4-mini&13.181324451119698&1.1240004898446347E-39&0.0038461538461538464&0.005\\12&Deepseek-V3.2 vs. GPT-5.4-mini&11.815619504947401&3.241506592879603E-32&0.004166666666666667&0.005\\11&Gemini-3.1-Flash-Lite-Preview vs. GPT-5.4-mini&11.564393937549442&6.243054017970726E-31&0.004545454545454546&0.005\\10&Gemini-3.1-Flash-Lite-Preview vs. Qwen3-Coder-30B-A3B-Instruct&11.075305864850144&1.6531469198240537E-28&0.005&0.005\\9&Deepseek-V3.2 vs. Qwen3-Coder-30B-A3B-Instruct&10.824080297452184&2.6472339786509674E-27&0.005555555555555556&0.0071428571428571435\\8&Qwen3-32B vs. Qwen3-Coder-30B-A3B-Instruct&9.458375351279887&3.127647578527917E-21&0.00625&0.0071428571428571435\\7&Qwen3-32B vs. Deepseek-V4-Flash&7.485987385966674&7.10112157953554E-14&0.0071428571428571435&0.0071428571428571435\\6&Deepseek-V3.2 vs. Deepseek-V4-Flash&6.120282439794378&9.340963903268374E-10&0.008333333333333333&0.008333333333333333\\5&Gemini-3.1-Flash-Lite-Preview vs. Deepseek-V4-Flash&5.869056872396418&4.382810894886191E-9&0.01&0.0125\\4&GPT-5.4-mini vs. Deepseek-V4-Flash&5.695337065153023&1.2312842324798461E-8&0.0125&0.0125\\3&Gemini-3.1-Flash-Lite-Preview vs. Qwen3-32B&1.6169305135702563&0.1058932809336069&0.016666666666666666&0.016666666666666666\\2&Deepseek-V3.2 vs. Qwen3-32B&1.3657049461722965&0.17203159125071982&0.025&0.025\\1&Deepseek-V3.2 vs. Gemini-3.1-Flash-Lite-Preview&0.2512255673979598&0.8016397183763355&0.05&0.05\\\hline
+\end{tabular}
+\end{table}
+Nemenyi's procedure rejects those hypotheses that have a p-value $\le0.0033333333333333335$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.016666666666666666$.
+
+
+Shaffer's procedure rejects those hypotheses that have a p-value $\le0.0033333333333333335$.
+
+
+Bergmann's procedure rejects these hypotheses:
+
+
+\begin{itemize}
+
+
+\item Deepseek-V3.2 vs. Qwen3-Coder-30B-A3B-Instruct\item Deepseek-V3.2 vs. GPT-5.4-mini\item Deepseek-V3.2 vs. Deepseek-V4-Flash\item Gemini-3.1-Flash-Lite-Preview vs. Qwen3-Coder-30B-A3B-Instruct\item Gemini-3.1-Flash-Lite-Preview vs. GPT-5.4-mini\item Gemini-3.1-Flash-Lite-Preview vs. Deepseek-V4-Flash\item Qwen3-32B vs. Qwen3-Coder-30B-A3B-Instruct\item Qwen3-32B vs. GPT-5.4-mini\item Qwen3-32B vs. Deepseek-V4-Flash\item Qwen3-Coder-30B-A3B-Instruct vs. GPT-5.4-mini\item Qwen3-Coder-30B-A3B-Instruct vs. Deepseek-V4-Flash\item GPT-5.4-mini vs. Deepseek-V4-Flash\end{itemize}
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Shaffer Table for $\alpha=0.10$}
+\begin{tabular}{cccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm&Shaffer\\
+\hline
+15&Qwen3-Coder-30B-A3B-Instruct vs. GPT-5.4-mini&22.639699802399587&1.7623955826820415E-113&0.006666666666666667&0.006666666666666667\\14&Qwen3-Coder-30B-A3B-Instruct vs. Deepseek-V4-Flash&16.944362737246564&2.118168854236548E-64&0.0071428571428571435&0.01\\13&Qwen3-32B vs. GPT-5.4-mini&13.181324451119698&1.1240004898446347E-39&0.007692307692307693&0.01\\12&Deepseek-V3.2 vs. GPT-5.4-mini&11.815619504947401&3.241506592879603E-32&0.008333333333333333&0.01\\11&Gemini-3.1-Flash-Lite-Preview vs. GPT-5.4-mini&11.564393937549442&6.243054017970726E-31&0.009090909090909092&0.01\\10&Gemini-3.1-Flash-Lite-Preview vs. Qwen3-Coder-30B-A3B-Instruct&11.075305864850144&1.6531469198240537E-28&0.01&0.01\\9&Deepseek-V3.2 vs. Qwen3-Coder-30B-A3B-Instruct&10.824080297452184&2.6472339786509674E-27&0.011111111111111112&0.014285714285714287\\8&Qwen3-32B vs. Qwen3-Coder-30B-A3B-Instruct&9.458375351279887&3.127647578527917E-21&0.0125&0.014285714285714287\\7&Qwen3-32B vs. Deepseek-V4-Flash&7.485987385966674&7.10112157953554E-14&0.014285714285714287&0.014285714285714287\\6&Deepseek-V3.2 vs. Deepseek-V4-Flash&6.120282439794378&9.340963903268374E-10&0.016666666666666666&0.016666666666666666\\5&Gemini-3.1-Flash-Lite-Preview vs. Deepseek-V4-Flash&5.869056872396418&4.382810894886191E-9&0.02&0.025\\4&GPT-5.4-mini vs. Deepseek-V4-Flash&5.695337065153023&1.2312842324798461E-8&0.025&0.025\\3&Gemini-3.1-Flash-Lite-Preview vs. Qwen3-32B&1.6169305135702563&0.1058932809336069&0.03333333333333333&0.03333333333333333\\2&Deepseek-V3.2 vs. Qwen3-32B&1.3657049461722965&0.17203159125071982&0.05&0.05\\1&Deepseek-V3.2 vs. Gemini-3.1-Flash-Lite-Preview&0.2512255673979598&0.8016397183763355&0.1&0.1\\\hline
+\end{tabular}
+\end{table}
+Nemenyi's procedure rejects those hypotheses that have a p-value $\le0.006666666666666667$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.03333333333333333$.
+
+
+Shaffer's procedure rejects those hypotheses that have a p-value $\le0.006666666666666667$.
+
+
+Bergmann's procedure rejects these hypotheses:
+
+
+\begin{itemize}
+
+
+\item Deepseek-V3.2 vs. Qwen3-Coder-30B-A3B-Instruct
+\item Deepseek-V3.2 vs. GPT-5.4-mini
+\item Deepseek-V3.2 vs. Deepseek-V4-Flash
+\item Gemini-3.1-Flash-Lite-Preview vs. Qwen3-Coder-30B-A3B-Instruct
+\item Gemini-3.1-Flash-Lite-Preview vs. GPT-5.4-mini
+\item Gemini-3.1-Flash-Lite-Preview vs. Deepseek-V4-Flash
+\item Qwen3-32B vs. Qwen3-Coder-30B-A3B-Instruct
+\item Qwen3-32B vs. GPT-5.4-mini
+\item Qwen3-32B vs. Deepseek-V4-Flash
+\item Qwen3-Coder-30B-A3B-Instruct vs. GPT-5.4-mini
+\item Qwen3-Coder-30B-A3B-Instruct vs. Deepseek-V4-Flash
+\item GPT-5.4-mini vs. Deepseek-V4-Flash
+\end{itemize}
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Adjusted $p$-values}
+\begin{tabular}{cccccccc}
+i&hypothesis&unadjusted $p$&$p_{Neme}$&$p_{Holm}$&$p_{Shaf}$&$p_{Berg}$\\
+\hline
+1&Qwen3-Coder-30B-A3B-Instruct vs .GPT-5.4-mini&.0000&.0000&.0000&.0000&.0000\\2&Qwen3-Coder-30B-A3B-Instruct vs .Deepseek-V4-Flash&.0000&.0000&.0000&.0000&.0000\\3&Qwen3-32B vs .GPT-5.4-mini&.0000&.0000&.0000&.0000&.0000\\4&Deepseek-V3.2 vs .GPT-5.4-mini&.0000&.0000&.0000&.0000&.0000\\5&Gemini-3.1-Flash-Lite-Preview vs .GPT-5.4-mini&.0000&.0000&.0000&.0000&.0000\\6&Gemini-3.1-Flash-Lite-Preview vs .Qwen3-Coder-30B-A3B-Instruct&.0000&.0000&.0000&.0000&.0000\\7&Deepseek-V3.2 vs .Qwen3-Coder-30B-A3B-Instruct&.0000&.0000&.0000&.0000&.0000\\8&Qwen3-32B vs .Qwen3-Coder-30B-A3B-Instruct&.0000&.0000&.0000&.0000&.0000\\9&Qwen3-32B vs .Deepseek-V4-Flash&.0000&.0000&.0000&.0000&.0000\\10&Deepseek-V3.2 vs .Deepseek-V4-Flash&.0000&.0000&.0000&.0000&.0000\\11&Gemini-3.1-Flash-Lite-Preview vs .Deepseek-V4-Flash&.0000&.0000&.0000&.0000&.0000\\12&GPT-5.4-mini vs .Deepseek-V4-Flash&.0000&.0000&.0000&.0000&.0000\\13&Gemini-3.1-Flash-Lite-Preview vs .Qwen3-32B&.1059&1.5884&.3177&.3177&.3177\\14&Deepseek-V3.2 vs .Qwen3-32B&.1720&2.5805&.3441&.3441&.3177\\15&Deepseek-V3.2 vs .Gemini-3.1-Flash-Lite-Preview&.8016&12.0246&.8016&.8016&.8016\\\hline
+\end{tabular}
+\end{table}
+
+\end{landscape}\end{document}

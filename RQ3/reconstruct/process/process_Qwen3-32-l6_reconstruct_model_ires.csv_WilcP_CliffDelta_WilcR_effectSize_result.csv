@@ -1,0 +1,6 @@
+paired methods,original p,adjusted p (Holm-Bonferroni),Cliff's delta,effect size (delta),Wilcoxon r, effect size (r)
+Qwen3-32B_ires vs deepseekv3.2_ires,0.8925250290180435,0.8925250290180435,0.013654618473895583,negligible,-0.0019141557162499889,negligible
+Qwen3-32B_ires vs deepseekv4-flash_ires,0.0,0.0,-0.1254509018036072,negligible,-0.16441699226141065,small
+Qwen3-32B_ires vs Qwen3-Coder-30B-A3B-Instruct_ires,0.003649745101385715,0.00729949020277143,-0.034275405892964524,negligible,-0.04115567168940788,negligible
+Qwen3-32B_ires vs gpt-5.4-mini_ires,2.6352253712502716E-12,1.0540901485001086E-11,-0.10741482965931863,negligible,-0.0990362509478547,negligible
+Qwen3-32B_ires vs gemini-3.1-flash-lite-preview_ires,4.5080184030155124E-10,1.3524055209046537E-9,-0.056323912607737024,negligible,-0.08827795525746034,negligible

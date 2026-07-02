@@ -1,0 +1,146 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{lscape}
+\title{Results}
+\date{\today}
+\begin{document}
+\begin{landscape}
+\oddsidemargin 0in \topmargin 0in\maketitle
+\section{Tables of Friedman, Bonferroni-Dunn, Holm, Hochberg and Hommel Tests}
+\begin{table}[!htp]
+\centering
+\caption{Average Rankings of the algorithms
+}\begin{tabular}{c|c}
+Algorithm&Ranking\\
+\hline
+qwen3-4B_ires&1.6378\\
+qwen3-8B_ires&1.4907\\
+doubao-embedding-vision-251215_ires&2.8715\\
+\end{tabular}
+\end{table}
+
+
+Friedman statistic considering reduction performance (distributed according to chi-square with 2 degrees of freedom: 5750.437899991416.
+
+
+P-value computed by Friedman Test: 0.0.\newline
+
+Iman and Davenport statistic considering reduction performance (distributed according to F-distribution with 2 and 9998 degrees of freedom: 6764.565003532723.
+
+
+P-value computed by Iman and Daveport Test: 0.0.\newline
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Hochberg Table for $\alpha=0.05$}
+\begin{tabular}{ccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel\\
+\hline
+2&doubao-embedding-vision-251215_ires&69.03999999999641&0.0&0.025\\
+1&qwen3-4B_ires&7.354999999999545&1.9092711595299567E-13&0.05\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.025$.
+
+
+Hochberg's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+Hommel's procedure rejects all hypotheses.
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Hochberg Table for $\alpha=0.10$}
+\begin{tabular}{ccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel\\
+\hline
+2&doubao-embedding-vision-251215_ires&69.03999999999641&0.0&0.05\\
+1&qwen3-4B_ires&7.354999999999545&1.9092711595299567E-13&0.1\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.05$.
+
+
+Hochberg's procedure rejects those hypotheses that have a p-value $\le0.1$.
+
+
+Hommel's procedure rejects all hypotheses.
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Adjusted $p$-values}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Bonf}$&$p_{Holm}$&$p_{Hoch}$&$p_{Homm}$\\
+\hline
+1&doubao-embedding-vision-251215_ires&0.0&0.0&0.0&0.0&0.0\\
+2&qwen3-4B_ires&1.9092711595299567E-13&3.8185423190599134E-13&1.9092711595299567E-13&1.9092711595299567E-13&1.9092711595299567E-13\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Shaffer Table for $\alpha=0.05$}
+\begin{tabular}{cccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm&Shaffer\\
+\hline
+3&qwen3-8B_ires vs. doubao-embedding-vision-251215_ires&69.03999999999641&0.0&0.016666666666666666&0.016666666666666666\\2&qwen3-4B_ires vs. doubao-embedding-vision-251215_ires&61.68499999999687&0.0&0.025&0.05\\1&qwen3-4B_ires vs. qwen3-8B_ires&7.354999999999545&1.9092711595299567E-13&0.05&0.05\\\hline
+\end{tabular}
+\end{table}
+Nemenyi's procedure rejects those hypotheses that have a p-value $\le0.016666666666666666$.
+
+
+Shaffer's procedure rejects those hypotheses that have a p-value $\le0.016666666666666666$.
+
+
+Bergmann's procedure rejects these hypotheses:
+
+
+\begin{itemize}
+
+
+\item qwen3-4B_ires vs. qwen3-8B_ires\item qwen3-4B_ires vs. doubao-embedding-vision-251215_ires\item qwen3-8B_ires vs. doubao-embedding-vision-251215_ires\end{itemize}
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Holm / Shaffer Table for $\alpha=0.10$}
+\begin{tabular}{cccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm&Shaffer\\
+\hline
+3&qwen3-8B_ires vs. doubao-embedding-vision-251215_ires&69.03999999999641&0.0&0.03333333333333333&0.03333333333333333\\2&qwen3-4B_ires vs. doubao-embedding-vision-251215_ires&61.68499999999687&0.0&0.05&0.1\\1&qwen3-4B_ires vs. qwen3-8B_ires&7.354999999999545&1.9092711595299567E-13&0.1&0.1\\\hline
+\end{tabular}
+\end{table}
+Nemenyi's procedure rejects those hypotheses that have a p-value $\le0.03333333333333333$.
+
+
+Shaffer's procedure rejects those hypotheses that have a p-value $\le0.03333333333333333$.
+
+
+Bergmann's procedure rejects these hypotheses:
+
+
+\begin{itemize}
+
+
+\item qwen3-4B_ires vs. qwen3-8B_ires
+\item qwen3-4B_ires vs. doubao-embedding-vision-251215_ires
+\item qwen3-8B_ires vs. doubao-embedding-vision-251215_ires
+\end{itemize}
+
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Adjusted $p$-values}
+\begin{tabular}{cccccccc}
+i&hypothesis&unadjusted $p$&$p_{Neme}$&$p_{Holm}$&$p_{Shaf}$&$p_{Berg}$\\
+\hline
+1&qwen3-8B_ires vs .doubao-embedding-vision-251215_ires&.0000&.0000&.0000&.0000&.0000\\2&qwen3-4B_ires vs .doubao-embedding-vision-251215_ires&.0000&.0000&.0000&.0000&.0000\\3&qwen3-4B_ires vs .qwen3-8B_ires&.0000&.0000&.0000&.0000&.0000\\\hline
+\end{tabular}
+\end{table}
+
+\end{landscape}\end{document}

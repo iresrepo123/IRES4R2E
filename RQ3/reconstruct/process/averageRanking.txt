@@ -1,0 +1,8 @@
+deepseekv4-flash_ires&3.2879\\
+gpt-5.4-mini_ires&3.3149\\
+gemini-3.1-flash-lite-preview_ires&3.4852\\
+Qwen3-Coder-30B-A3B-Instruct_ires&3.5857\\
+Qwen3-32B_ires&3.6546\\
+deepseekv3.2_ires&3.6717\\
+
+5+4+3+2+1=15 comparisons
