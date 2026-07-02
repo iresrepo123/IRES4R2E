@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RQ1 Code-Summary Evaluation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="welcome" class="panel">
+      <h1>RQ1 Code-Summary Evaluation</h1>
+      <p>You will read a Java method and rank nine candidate summaries from best to worst. Candidate labels are randomized and do not reveal their source configuration.</p>
+      <h2>Evaluation criteria</h2>
+      <ul>
+        <li><strong>Coherence:</strong> the summary is logically organized and understandable.</li>
+        <li><strong>Consistency:</strong> every claim is supported by the code; penalize hallucinated behavior.</li>
+        <li><strong>Fluency:</strong> the summary is grammatical, readable, and natural.</li>
+        <li><strong>Relevance:</strong> it focuses on the method's main intent and important operations.</li>
+      </ul>
+      <p class="note">Drag summaries to create a complete ranking: position 1 is best and position 9 is worst. You may pause and resume on the same browser.</p>
+      <div class="form-grid">
+        <label>Anonymous participant ID<input id="participant-id" required maxlength="80" placeholder="e.g., P01"></label>
+        <label>Assigned batch (1--20)<input id="batch-number" required type="number" min="1" max="20" value="1"></label>
+      </div>
+      <button id="start-button">Start annotation</button>
+      <p id="welcome-error" class="error" aria-live="polite"></p>
+    </section>
+
+    <section id="annotation" class="hidden">
+      <header class="toolbar panel">
+        <div><strong id="participant-display"></strong> · Batch <span id="batch-display"></span></div>
+        <div id="progress" aria-live="polite"></div>
+        <button id="export-button" class="secondary">Download my CSV</button>
+      </header>
+      <section class="panel task-header">
+        <h2 id="function-name"></h2>
+        <p>Rank the summaries by overall quality. The top position is best.</p>
+      </section>
+      <section class="code-panel panel">
+        <h3>Code</h3>
+        <pre><code id="code"></code></pre>
+      </section>
+      <section class="panel">
+        <h3>Candidate summaries</h3>
+        <p class="note">Drag a card using its handle. The letters are randomized separately for each participant and task.</p>
+        <ol id="ranking-list" class="ranking-list"></ol>
+      </section>
+      <nav class="navigation">
+        <button id="previous-button" class="secondary">← Previous</button>
+        <button id="next-button">Next →</button>
+      </nav>
+      <p id="save-status" class="note" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="annotation_tasks.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

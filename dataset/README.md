@@ -1,4 +1,5 @@
-# Dataset construction process
+# Dataset Construction
+
 While CodeSearchNet provides the necessary method-level metadata, it lacks the comprehensive contextual information required to investigate our research questions. To bridge this gap, we must trace each method back to its originating project to extract the relevant context. However, processing the entire CodeSearchNet Java partition---which encompasses 4,769 projects and 496,688 methods---is computationally prohibitive for large-scale LLM experiments. Consequently, we constructed a representative subset through a systematic seven-step pipeline:
 1. We mapped each Java method in CodeSearchNet back to its original repository using the provided URLs in the method metadata;
 2. We aggregated the method counts per project and ranked them in descending order;
@@ -10,4 +11,49 @@ While CodeSearchNet provides the necessary method-level metadata, it lacks the c
 
 Unless otherwise specified, all empirical evaluations in this study are conducted on this final dataset.
 
-**Our dataset is available at code\R2E\dataset**.
+**Specifically:**
+We first downloaded the Java subset of CodeSearchNet from Hugging Face and saved it as `my_java_data.json`. Because the source file is larger than 1.5 GB, it is not included in this repository. It can be downloaded and exported locally by running:
+
+```bash
+python get_dataset.py
+```
+
+After downloading the dataset, we used `countrepo.py` to count the number of functions associated with each repository. The script prints the 50 repositories containing the largest numbers of functions in descending order:
+
+```bash
+python countrepo.py
+```
+
+We then examined the GitHub repositories of these projects to identify their application domains. From them, we selected the following 14 repositories:
+
+1. `Unidata/thredds`
+2. `alkacon/opencms-core`
+3. `apache/flink`
+4. `apache/groovy`
+5. `cdk/cdk`
+6. `deeplearning4j/deeplearning4j`
+7. `elki-project/elki`
+8. `facebookarchive/hadoop-20`
+9. `google/error-prone-javac`
+10. `google/j2objc`
+11. `hazelcast/hazelcast`
+12. `lessthanoptimal/BoofCV`
+13. `looly/hutool`
+14. `zaproxy/zaproxy`
+
+These projects cover a diverse range of application domains, and our preliminary tests confirmed that all of them could be parsed by Joern. We used `extract_and_split.py` to extract the CodeSearchNet entries belonging to each selected project and save them as separate project-level files in `selected_projects_json`:
+
+```bash
+python extract_and_split.py
+```
+
+Next, we used `query_context.sc` with Joern to extract contextual information for the functions. The resulting project-level files are stored in `projects_json_context`.
+
+Finally, we used `sample_dataset.py` to select 5,000 functions while balancing the number of functions drawn from each project as evenly as possible. The script uses a fixed random seed of 42 by default to make the sampling process reproducible:
+
+```bash
+python sample_dataset.py
+```
+
+The resulting dataset is saved as `dataset.json`.
+

@@ -1,0 +1,25 @@
+:root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #172033; background: #f3f6fb; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { max-width: 1120px; margin: 0 auto; padding: 28px 18px 48px; }
+.panel { background: #fff; border: 1px solid #dbe3f0; border-radius: 12px; padding: 22px; margin-bottom: 18px; box-shadow: 0 2px 7px #16213e0a; }
+h1, h2, h3 { margin-top: 0; }
+h1 { font-size: 1.75rem; } h2 { font-size: 1.25rem; } h3 { font-size: 1.05rem; }
+p, li { line-height: 1.55; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin: 22px 0; }
+label { display: grid; gap: 7px; font-weight: 650; }
+input { font: inherit; padding: 9px 10px; border: 1px solid #aebbd0; border-radius: 7px; }
+button { cursor: pointer; border: 0; border-radius: 7px; background: #174ea6; color: #fff; padding: 10px 15px; font: inherit; font-weight: 650; }
+button:hover { background: #103d87; } button:disabled { opacity: .48; cursor: not-allowed; }
+.secondary { background: #e9eef8; color: #22365a; } .secondary:hover { background: #dce5f3; }
+.hidden { display: none; }.error { color: #b42318; font-weight: 600; }.note { color: #52627d; font-size: .93rem; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; position: sticky; top: 10px; z-index: 2; }
+.code-panel pre { margin: 0; max-height: 420px; overflow: auto; padding: 16px; border-radius: 8px; background: #111827; color: #e5eefc; font-size: .86rem; line-height: 1.45; white-space: pre-wrap; }
+.ranking-list { padding: 0; margin: 0; list-style: none; counter-reset: rank; }
+.ranking-card { counter-increment: rank; padding: 14px; border: 1px solid #cdd8e8; border-radius: 9px; margin: 9px 0; background: #fff; }
+.candidate-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 11px; }
+.rank-number::before { content: counter(rank); display: grid; place-items: center; width: 34px; height: 34px; font-weight: 800; border-radius: 50%; background: #dce9ff; color: #103d87; }
+.handle { user-select: none; cursor: grab; font-size: 1.35rem; line-height: 1; color: #61718d; text-align: center; }.dragging { opacity: .45; }.drag-over { border: 2px dashed #174ea6; }
+.candidate-label { display: inline-block; padding: 4px 8px; border-radius: 5px; color: #fff; background: #52627d; font-weight: 700; }.summary { display: block; width: 100%; white-space: pre-wrap; overflow-wrap: break-word; line-height: 1.5; }
+.navigation { display: flex; justify-content: space-between; gap: 10px; }
+@media (max-width: 650px) { .toolbar { align-items: stretch; flex-direction: column; }.ranking-card { padding: 11px; }.candidate-meta { gap: 12px; } }
