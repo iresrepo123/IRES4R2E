@@ -124,4 +124,4 @@ Method Summary: {summary}
 
 
 
-**The prompts are also available at code\R2E\prompt.**
+## **The prompts are also available at code\R2E\prompt.**
